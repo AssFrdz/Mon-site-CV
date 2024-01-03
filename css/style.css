@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600;800&display=swap');
+:root {
+    --titre-font-size: 2em; /* Taille de police pour les titres */
+    --titre-epaisseur: 600;
+    --sous-titre-font-size: 1.5em; /* Taille de police pour les sous-titres */
+    --sous-titre-epaisseur: 400;
+    --texte-font-size: 1.25em; /* Taille de police pour le texte du corps */
+    --texte-titre-epaisseur: 100;
+    --padding-bouton: 2vw;
+    --padding-conteneur-texte: 4vw;
+    --padding-section: 8vw;
+    --jaune: rgb(168, 149, 253);
+    --noir-gris: rgb(23, 23, 23);
+  }
+  
+/* Initialisation */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color:var(--jaune) ;
+  box-sizing: border-box;
+  
+}
+
+/* Création de l'entête */
+header {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.entete {
+  background-color:var(--noir-gris);
+  display: flex;
+  margin: 1em; /* Ajustement des marges pour une meilleure réactivité */
+  margin-top: 2em;
+  height: auto; /* Utilisation de la hauteur auto */
+  border-radius: 1em;
+  align-items: center;
+  padding: 1em;
+  justify-content: space-between;
+  overflow: hidden; /* Ajout de la propriété overflow pour gérer le contenu */
+}
+
+.entete.phone {
+  display: none;
+}
+
+
+/* responsive design */
+
+@media screen and (max-width:1024px){
+  .logo{
+    display:none;
+  }
+
+
+  .entete {
+    display:none;
+  }
+
+  
+  .na {
+    padding: 2em;
+  }
+
+  .entete.phone{
+    display:flex;
+    justify-content: space-between;
+
+  }
+  .entete.phone nav a img{
+    width: 7%;
+    height: 7%;
+  }
+
+  .entete.phone nav a {
+    margin: 0 0.5em;
+    padding: 0;
+  }
+  .entete.phone nav a:hover {
+    background-color: transparent;
+  }
+
+  .entete.phone nav {
+    text-align: center;
+  }
+
+  /* réglagle de l'image dans la page des expériences*/
+  .experience .mariage.box{
+    display:block;
+  }
+
+  .mariage.box .img {
+    display:none;
+  }
+
+ :root{
+  --titre-font-size:1.25em;
+  --sous-titre-font-size: 1em;
+  --texte-font-size: 0.8em;
+ }
+
+.na{
+    font-size: var(--texte-font-size);
+ }
+
+ .box {
+  word-wrap:break-word;
+ }
+
+ 
+
+
+ 
+
+
+
+ 
+
+  
+
+}
+
+.entete a {
+  color: var(--jaune);
+  padding: 0.5em 1em; 
+  font-size: 1em;
+  border-radius: 0.5em;
+}
+
+.logo {
+  padding: 25px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  border: 1px solid var(--jaune);
+  background-image: url(../icon/F.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.contact{
+    padding: var(--padding-bouton);
+    border: 0.1em solid var(--jaune);
+    border-radius: 30px;
+}
+
+/* Apparence des liens au survol */
+.entete nav a:hover {
+  background-color: var(--jaune);
+  color:var(--noir-gris);
+}
+
+
+
+
+
+/* Animation clignotante*/
+@keyframes clignote {
+  0% {
+    color: black;
+  }
+  100% {
+    color: white;
+  }
+}
+
+/* Contenu de la Page */
+main {
+  margin-top: 10em;
+}
+
+
+/* Création de l'accueil */
+.coordonnees em {
+  animation: clignote 1s infinite;
+}
+
+ .coordonnees {
+  width: 100%;
+  height: 17em; 
+  background-color:black;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 5px rgb(245, 255, 179);
+  font-size: var(--titre-font-size); /* Utilisation de vw pour une taille de police responsive */
+  font-weight: var(--titre-epaisseur);
+  display: block;
+  animation: clignote 2s;
+  background-image: url(../icon/F.png);
+  background-size:contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  padding-top: 10vh; /* Utilisation de vh pour un padding responsive */
+}
+
+
+.coordonnees span{
+  margin-left: 5vw; /* Utilisation de vw pour un margin responsive */
+  margin-top: 10vh; /* Utilisation de vh pour un margin responsive */
+}
+
+.coordonnees span{
+  text-transform:capitalize ;
+}
+
+/* Contenu de base des pages */
+
+/* titre */
+.na .titre {
+  font-weight: var(--titre-epaisseur);
+  font-size: var(--titre-font-size);
+  
+}
+
+
+/* mise en forme des boites: */
+.box {
+  background-color: var(--jaune);
+  padding: 1em;
+  width: 80%; /* Utilisation de 100% pour une largeur responsive */
+  margin: 1em auto;
+  box-shadow: 0.5px 0.5px 4px black;
+  color:#333;
+}
+
+
+
+/* Page d'accueil: Redirection vers des liens à l'accueil*/
+
+
+a.btn  {
+  color: white;
+  display:flex;
+  font-size:var(--texte-font-size);
+}
+.arrow{
+  height: 2px;
+  width: 30px;
+  background-color: white;
+  position: relative;
+  top: 11px;
+  margin-right: 1em;
+  transition: all 0.2s;
+}
+
+.btn .arrow::before, .btn .arrow::after {
+  position: absolute;
+  content:"";
+  height: 2px;
+  width: 10px;
+  background-color: white;
+  right: 0;
+  top: 0;
+ 
+}
+
+.btn .arrow::before{
+  transform: rotate(45deg);
+  transform-origin: right bottom;
+}
+.btn .arrow::after {
+  transform: rotate(-45deg);
+  transform-origin: right top;
+}
+.btn:hover .arrow{
+  width: 4em;
+}
+
+/* Création d'une animation pour les boutons*/
+
+@keyframes button {
+  0% {
+    color: rgb(245, 255, 179);
+    background-color: rgb(23, 23, 23);
+  }
+  100% {
+    color: rgb(23, 23, 23);
+    background-color: rgb(245, 255, 179);
+  }
+}
+
+
+/* pied de page */
+
+footer{
+    background-color: var(--noir-gris);
+    color: var(--jaune);
+    font-size: var(--texte-font-size);
+    font-weight: var(--sous-titre-epaisseurtitre-epaisseur);
+    text-shadow: 0px 0px 1px rgb(250, 255, 221);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+    overflow-wrap: break-word;
+    justify-content: center;
+    
+}
+
+footer span {
+  scale: 0.7;
+ 
+}
+footer span ul {
+  list-style-type:none;
+  
+}
+
+footer span ul li{
+  color:white;
+}
+
+/* Style général du contenu */
+.na {
+  padding:var(--padding-section);
+  background-color: white;
+  padding: 2em;
+  color: #333;
+}
+
+
+/* Style pour la page scolarité */
+
+.lieu  {
+  font-size:var(--sous-titre-font-size);
+}
+
+/* Style pour chaque point */
+
+.timeline-object{
+  display: flex;
+  align-items:center;
+  margin-top: 1em;
+  position: relative;
+}
+/*Style de la barre de la timeline*/
+.timeline-object::after{
+  content: '';
+  display:block;
+  position: absolute;
+  width: 5px;
+  height: 210px;
+  background-color: rgb(235, 76, 89);
+  left: 20px;
+  top:20px;
+  box-shadow: 2px 0px 2px rgb(70, 70, 70);
+}
+
+/* Style pour le rond de la formation non complétée: utilisation de not */
+.timeline-object:not(.complete) .timeline-status{
+  background-color: rgb(255, 255, 255);
+  border: 3px solid grey;
+}
+/*style du rond*/
+.timeline-status {
+  height: 45px;
+  width: 45px;
+  border-radius: 25px;
+  background-color: rgb(235, 76, 89);
+  position: relative;
+  bottom: 80px;
+  box-shadow: 2px 0px 2px rgb(70, 70, 70);
+  z-index: 3;
+  animation: bounce 3s ease-in-out infinite;
+}
+.scolarité{
+  box-sizing: border-box;
+}
+#accueil,#scolarite,#experience,#competences,#certif_langues,#hobby,#contact{
+  background-color: var(--noir-gris);
+  color:var(--jaune);
+}
+/*contenu de chaque point*/
+.timeline-content{
+  margin-left: 15px;
+}
+
+.titre_{
+  color:var(--noir-gris);
+  font-size:var(--titre-font-size);
+  background-color: rgb(191, 191, 255);
+  padding: 0 0.1em;
+  font-weight: var(--titre-epaisseur)
+}
+
+.timeline-content .annee{
+  font-weight:var(--titre-epaisseur);
+}
+
+.voillaume, .balzac {
+  padding: 4em 2em;
+  margin: 2em;
+  background-color: var(--jaune);
+  color:var(--noir-gris);
+}
+
+
+.texte p {
+  color:white;
+  font-size:var(--texte-font-size);
+  padding: 2em;
+}
+
+@media screen and (max-width:1033px) {
+  .timeline-status{
+    display:none;
+  }
+  .timeline-object::after{
+    display:none;
+  }
+  
+}
+/*Contenu de la page expérience*/
+
+.exp .box .titre{
+  background-color: var(--jaune) ;
+  padding: 0
+}
+
+.exp .box .img {
+  margin: 2em auto;
+  background: url(../img/key-ass1.png) top no-repeat,
+              url(../img/key-ass4.png) bottom no-repeat;
+  background-size: 90% 50%;
+  width:150em;
+  height:40em;
+}
+
+
+
+
+
+.exp .box{
+  display: flex;
+  background-color: var(--jaune);
+}
+.exp .content{
+  padding : 2em;
+}
+.exp .liste{
+  color: black;
+}
+.competence{
+  display:flex;
+}
+.competence .box{
+  padding: 1em;
+  width:100%;
+  text-align:center;
+  margin: 1em auto;
+  display: block;
+}
+
+.competence  .circle-diagram {
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  position: relative;
+  margin:0 auto 1em auto;
+  padding: 1em;
+  animation: bounce 5s ease-in-out infinite;
+}
+
+.competence .circle-diagram.html {
+  background: conic-gradient(#8aff8e 0% 35%, #e0e0e0 50% 100%);
+}
+
+.competence .circle-diagram.css {
+  background: conic-gradient(#de8aff 0% 65%, #e0e0e0 50% 100%);
+}
+
+.percent-txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-weight: bold;
+  font-size: var(--texte-font-size);
+  background-color: white; 
+  border-radius: 50%;
+  padding: 0.8em 0.5em;
+  text-align: center;
+}
+.percent-txt span{
+    position:relative;
+    top:35%;
+    
+}
+
+.competence>div>span{
+  font-size: var(--sous-titre-font-size);
+}
+
+
+
+.ref a{
+  font-weight:bold;
+ 
+}
+.ref a:hover{
+  text-decoration: underline;
+}
+
+@keyframes bordure{
+  0%{
+    border-top: 2px solid white;
+  }
+  25%{
+    border-right: 2px solid white;
+  }
+  50%{
+    border-bottom: 2px solid white;
+  }
+  75%{
+    border-left: 2px solid white;
+  }
+}
+
+/*Contenu de la page compétences*/
+
+
+.competences .box {
+  padding:2em 3em;
+  width: 50%;
+}
+.competences>div{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.competences ul{
+  list-style-type: none;
+}
+
+.competences ul li img, .certif img, .langue img {
+  width: 50px;
+  position: relative;
+  top: 17px;
+  margin-right: 5px;
+  animation: bounce 2s ease-in-out infinite;
+}
+@keyframes bounce {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.08);
+  }
+
+  
+}
+.plate-diagram {
+  width: 15em;
+  height: 1em;
+  border: 4px solid grey;
+  position: relative;
+  margin-top:1em;
+}
+
+.plate-diagram:nth-child(1) {
+  background: conic-gradient(#5bd0ff 0% 50%, #e0e0e0 50% 100%);
+
+}
+
+.comp .percent-txt{
+  font-size: var(--texte-font-size);
+  background-color: transparent;
+}
+
+.comp.box.network {
+  background: url('../fd/2931163_exchange_network_share_sharing_social_icon.png') bottom right no-repeat;
+
+  background-size: cover;
+  background-size: 30%; 
+  background-color: var(--jaune);
+}
+
+.box.dev{
+  background: url('../fd/8541771_code_development_icon.png') center right no-repeat;
+  background-size: cover;
+  background-size: 25%; 
+  background-color: var(--jaune);
+}
+
+.box.skills{
+  background: url('../fd/4177627_brains_brainstorm_mind_processing_think_icon.png') center right no-repeat;
+  background-size: cover;
+  background-size: 40%; 
+  background-color: var(--jaune);
+}
+
+/*Style de la page certifications et langues*/
+.certif_langues .box{
+  padding: 2em;
+}
+
+/* style de la page contact */
+
+#contact a{
+  color:white;
+}
